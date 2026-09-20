@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LIFT-FLOW · S2/4 PF2/4</title>
+<title>LIFT-FLOW · S3/4 PF3/4</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -19,19 +19,20 @@
   .tab-btn:hover:not(.active){color:#e63030}
   .day-panel{display:none;padding:16px 14px;animation:fadeIn .3s ease forwards}
   .day-panel.active{display:block}
-  .block{margin-bottom:14px}
-  .block-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:2.5px;color:#e63030;font-weight:700;text-transform:uppercase;padding:8px 12px;background:#141414;border-left:3px solid #e63030;margin-bottom:2px}
-  .mob-list{background:#0e0e0e;border:1px solid #1e1e1e;padding:10px 14px}
+  .block{margin-bottom:14px;--c:#e63030}
+  .c1{--c:#38bdf8}.c2{--c:#f59e0b}.c3{--c:#e63030}.c4{--c:#a855f7}.c5{--c:#22c55e}.c6{--c:#ec4899}.c7{--c:#facc15}
+  .block-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:2.5px;color:var(--c);font-weight:700;text-transform:uppercase;padding:8px 12px;background:color-mix(in srgb,var(--c) 14%,#141414);border-left:3px solid var(--c);margin-bottom:2px}
+  .mob-list{background:#0e0e0e;border:1px solid color-mix(in srgb,var(--c) 30%,#1e1e1e);padding:10px 14px}
   .mob-item{font-size:13px;color:#ccc;padding:5px 0;border-bottom:1px solid #1a1a1a;font-family:'Barlow',sans-serif;display:flex;align-items:flex-start;gap:8px;line-height:1.4}
   .mob-item:last-child{border-bottom:none}
-  .mob-item::before{content:'•';color:#e63030;font-size:16px;line-height:1;flex-shrink:0}
-  .sets-table{width:100%;border:1px solid #1e1e1e;overflow:hidden}
+  .mob-item::before{content:'•';color:var(--c);font-size:16px;line-height:1;flex-shrink:0}
+  .sets-table{width:100%;border:1px solid color-mix(in srgb,var(--c) 30%,#1e1e1e);overflow:hidden}
   .sets-header{display:grid;grid-template-columns:1fr 60px 100px;background:#141414;padding:8px 12px;font-size:10px;color:#555;letter-spacing:2px;font-weight:700;border-bottom:1px solid #1e1e1e}
   .set-row{display:grid;grid-template-columns:1fr 60px 100px;padding:9px 12px;border-bottom:1px solid #1a1a1a;align-items:center;transition:background .15s}
   .set-row:last-child{border-bottom:none}
-  .set-row:hover{background:rgba(230,48,48,.05)}
+  .set-row:hover{background:color-mix(in srgb,var(--c) 8%,transparent)}
   .set-row:nth-child(odd){background:#0e0e0e}
-  .set-reps{text-align:center;font-size:14px;font-weight:700;color:#e63030;font-family:'Barlow Condensed',sans-serif}
+  .set-reps{text-align:center;font-size:14px;font-weight:700;color:var(--c);font-family:'Barlow Condensed',sans-serif}
   .set-pct{text-align:center;font-size:12px;color:#888;font-family:'Barlow',sans-serif}
   .set-series{font-size:13px;color:#aaa;font-family:'Barlow',sans-serif}
   .tag-badge{background:rgba(230,48,48,.15);border:1px solid #e63030;color:#e63030;padding:5px 12px;font-size:10px;letter-spacing:2px;font-weight:700;text-transform:uppercase}
@@ -75,8 +76,8 @@
     <img src="logo.LF.jpg" alt="LIFT-FLOW" style="width:100%;max-width:180px;display:block">
   </div>
   <div style="font-size:10px;letter-spacing:4px;color:#e63030;font-weight:700;margin-bottom:4px">LIFT-FLOW · HALTEROFILIA</div>
-  <div style="font-size:36px;font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:3px">SEMANA 2/4</div>
-  <div style="font-size:12px;color:#777;margin-top:6px;font-family:'Barlow',sans-serif;letter-spacing:1px">P.F. 2/4</div>
+  <div style="font-size:36px;font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:3px">SEMANA 3/4</div>
+  <div style="font-size:12px;color:#777;margin-top:6px;font-family:'Barlow',sans-serif;letter-spacing:1px">P.F. 3/4</div>
   <div style="margin-top:10px">
     <span class="pill">Snatch</span><span class="pill">Clean &amp; Jerk</span><span class="pill">Movilidad</span><span class="pill">Estabilidad</span><span class="pill">Fuerza piernas</span>
   </div>
@@ -111,49 +112,49 @@
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
     <div>
       <div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700">DÍA 1 · LUNES</div>
-      <div style="font-size:21px;font-weight:900;text-transform:uppercase">HIGH HANG SNATCH + O.H.S / TEMPO BACK SQUAT ATG</div>
+      <div style="font-size:21px;font-weight:900;text-transform:uppercase">HANG LOW POWER SNATCH + O.H.S / TEMPO BACK SQUAT ATG</div>
     </div>
     <span class="tag-badge">ESPECÍFICOS</span>
   </div>
-  <div class="block"><div class="block-title">Movilidad / Estabilidad</div><div class="mob-list">
-    <div class="mob-item">3×12/12 — Jalón tibial con liga</div>
-    <div class="mob-item">3×10/10 — Jalón flexores de cadera / liga</div>
+  <div class="block c1"><div class="block-title">Movilidad / Estabilidad</div><div class="mob-list">
+    <div class="mob-item">2×12/12 — Jalón tibial con liga</div>
+    <div class="mob-item">2×10/10 — Jalón flexores de cadera / liga / mantener 1sg de tensión</div>
     <div class="mob-item">3×10/10 — Rotaciones externas + interna de cadera / liga / sentado</div>
-    <div class="mob-item">3×10 — Nados con discos boca abajo</div>
+    <div class="mob-item">3×20/20sg — Plancha lateral / apoyar parte interna del pie en banco</div>
+    <div class="mob-item">3×10 — Dislocación de hombros / tubo / boca abajo</div>
     <div class="mob-item">3×8 — Back press con liga (agarre abierto)</div>
-    <div class="mob-item">3×10 — O.H.S. sobre pared / tubo (buscar la rotación externa de hombros)</div>
+    <div class="mob-item">3×10 — O.H.S. sobre pared / barra chica (buscar la rotación externa de hombros)</div>
   </div></div>
-  <div class="block"><div class="block-title">Técnica — High Hang Snatch + O.H.S</div>
+  <div class="block c2"><div class="block-title">Técnica — Hang Low Power Snatch + O.H.S</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
       <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">3+3</div><div class="set-pct">55%</div></div>
       <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">3+3</div><div class="set-pct">60%</div></div>
-      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">3+3</div><div class="set-pct">63%</div></div>
-      <div class="set-row"><div class="set-series">Serie 4</div><div class="set-reps">3+3</div><div class="set-pct">65%</div></div>
-      <div class="set-row"><div class="set-series">Serie 5</div><div class="set-reps">3+3</div><div class="set-pct">68%</div></div>
+      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">2+3</div><div class="set-pct">65%</div></div>
+      <div class="set-row"><div class="set-series">Series 4–6</div><div class="set-reps">2+2</div><div class="set-pct">70%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Fuerza — Tempo Back Squat (tempo 3-1-2) (ATG)</div>
+  <div class="block c3"><div class="block-title">Fuerza — Tempo Back Squat (tempo 3-2-2) (ATG)</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
-      <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">5</div><div class="set-pct">60% (rir3)</div></div>
-      <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">5</div><div class="set-pct">65% (rir3)</div></div>
-      <div class="set-row"><div class="set-series">Series 3–5</div><div class="set-reps">5</div><div class="set-pct">70% (rir2)</div></div>
+      <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">3</div><div class="set-pct">60%</div></div>
+      <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">3</div><div class="set-pct">65%</div></div>
+      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">3</div><div class="set-pct">70%</div></div>
+      <div class="set-row"><div class="set-series">Series 4–7</div><div class="set-reps">3</div><div class="set-pct">75% (RIR2)</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">D.L Snatch Grip / Pull</div>
+  <div class="block c4"><div class="block-title">Pause Snatch Pull (pausa arriba de rodillas)</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
-      <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">5</div><div class="set-pct">85%</div></div>
-      <div class="set-row"><div class="set-series">Series 2–4</div><div class="set-reps">5</div><div class="set-pct">92%</div></div>
+      <div class="set-row"><div class="set-series">Series 1–4</div><div class="set-reps">4</div><div class="set-pct">85%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Core / Accesorios</div><div class="mob-list">
+  <div class="block c5"><div class="block-title">Core / Accesorios</div><div class="mob-list">
     <div class="mob-item">4×10/10 — Lateral squat / goblet</div>
     <div class="mob-item">3×8 — DB Z press (sobre suelo)</div>
   </div></div>
-  <div class="block"><div class="block-title">Complemento</div><div class="mob-list">
+  <div class="block c6"><div class="block-title">Complemento</div><div class="mob-list">
     <div class="mob-item">3×20/20sg — Plancha lateral sobre banco (apoyar parte interna)</div>
     <div class="mob-item">3×máx reps — V ups</div>
   </div></div>
-  <div class="block"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
+  <div class="block c7"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
     <div><div class="enc-label">¿Qué bloque te costó más trabajo?</div><input class="enc-input" type="text" placeholder="Ej. Movilidad, Técnica, Fuerza, Core..."></div>
     <div><div class="enc-label">¿Cómo te sentiste en general hoy?</div><textarea class="enc-textarea" placeholder="Escribe aquí tus comentarios..."></textarea></div>
     <div class="enc-note">📸 Recuerda enviar una captura de esta encuesta al entrenador</div>
@@ -165,11 +166,11 @@
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
     <div>
       <div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700">DÍA 2 · MARTES</div>
-      <div style="font-size:21px;font-weight:900;text-transform:uppercase">JERK BALANCE + TEMPO CLEAN + HANG CLEAN + SPLIT JERK</div>
+      <div style="font-size:21px;font-weight:900;text-transform:uppercase">JERK BALANCE + TEMPO CLEAN + HANG LOW CLEAN + SPLIT JERK</div>
     </div>
     <span class="tag-badge">FUERZA + TÉCNICA</span>
   </div>
-  <div class="block"><div class="block-title">Movilidad</div><div class="mob-list">
+  <div class="block c1"><div class="block-title">Movilidad</div><div class="mob-list">
     <div class="mob-item">4×10/10 — Rotación externa de hombro con liga</div>
     <div class="mob-item">3×10 — Rotaciones de hombro laterales con peso (DB 5lb)</div>
     <div class="mob-item">4×40sg — Extensión torácica sobre banco + tubo (predicador)</div>
@@ -177,37 +178,37 @@
     <div class="mob-item">3×10 — Front squat controlado (liga chica en rodillas / barra grande)</div>
     <div class="mob-item">3×10 — Push up escapular / liga en palmas</div>
   </div></div>
-  <div class="block"><div class="block-title">Fuerza / Técnica — Jerk Balance</div>
-    <div style="font-size:12px;color:#888;font-family:'Barlow',sans-serif;padding:4px 12px 8px">Solo barra. Ambos pies.</div>
-    <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">CARGA</span></div>
-      <div class="set-row"><div class="set-series">Series 1–4</div><div class="set-reps">5/5</div><div class="set-pct">Solo barra</div></div>
+  <div class="block c2"><div class="block-title">Fuerza / Técnica — Jerk Balance</div>
+    <div style="font-size:12px;color:#888;font-family:'Barlow',sans-serif;padding:4px 12px 8px">Ambos pies.</div>
+    <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
+      <div class="set-row"><div class="set-series">Series 1–4</div><div class="set-reps">5/5</div><div class="set-pct">40%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Fuerza / Técnica — Tempo Clean + Hang Clean + Split Jerk</div>
+  <div class="block c3"><div class="block-title">Fuerza / Técnica — Tempo Clean + Hang Low Clean + Split Jerk</div>
     <div style="font-size:12px;color:#888;font-family:'Barlow',sans-serif;padding:4px 12px 8px">Subir lento hasta la posición de high hang para realizar el movimiento, buscando también el desplazamiento de los pies.</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
       <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">2+2+2</div><div class="set-pct">55%</div></div>
       <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">2+2+2</div><div class="set-pct">60%</div></div>
-      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">2+2+2</div><div class="set-pct">65%</div></div>
-      <div class="set-row"><div class="set-series">Serie 4</div><div class="set-reps">2+2+2</div><div class="set-pct">68%</div></div>
-      <div class="set-row"><div class="set-series">Serie 5</div><div class="set-reps">2+2+2</div><div class="set-pct">72%</div></div>
+      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">2+1+2</div><div class="set-pct">65%</div></div>
+      <div class="set-row"><div class="set-series">Serie 4</div><div class="set-reps">2+1+2</div><div class="set-pct">70%</div></div>
+      <div class="set-row"><div class="set-series">Series 5–7</div><div class="set-reps">2+1+2</div><div class="set-pct">75%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Déficit Clean Pull</div>
+  <div class="block c4"><div class="block-title">Déficit Clean Pull</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
-      <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">5</div><div class="set-pct">80%</div></div>
-      <div class="set-row"><div class="set-series">Series 2–4</div><div class="set-reps">5</div><div class="set-pct">88%</div></div>
+      <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">4</div><div class="set-pct">85%</div></div>
+      <div class="set-row"><div class="set-series">Series 2–5</div><div class="set-reps">3</div><div class="set-pct">90%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Core / Accesorios</div><div class="mob-list">
+  <div class="block c5"><div class="block-title">Core / Accesorios</div><div class="mob-list">
     <div class="mob-item">4×5/5 — Step up altura de medio muslo</div>
     <div class="mob-item">3×10/10 — Curl femoral con liga (sentado)</div>
     <div class="mob-item">3×10 — Nados boca abajo con peso (2.5lb)</div>
   </div></div>
-  <div class="block"><div class="block-title">Complemento</div><div class="mob-list">
+  <div class="block c6"><div class="block-title">Complemento</div><div class="mob-list">
     <div class="mob-item">3×10 — Extensiones lumbares GHD / con peso</div>
   </div></div>
-  <div class="block"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
+  <div class="block c7"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
     <div><div class="enc-label">¿Qué bloque te costó más trabajo?</div><input class="enc-input" type="text" placeholder="Ej. Movilidad, Técnica, Fuerza, Core..."></div>
     <div><div class="enc-label">¿Cómo te sentiste en general hoy?</div><textarea class="enc-textarea" placeholder="Escribe aquí tus comentarios..."></textarea></div>
     <div class="enc-note">📸 Recuerda enviar una captura de esta encuesta al entrenador</div>
@@ -219,48 +220,45 @@
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
     <div>
       <div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700">DÍA 3 · MIÉRCOLES</div>
-      <div style="font-size:21px;font-weight:900;text-transform:uppercase">BACK PUSH PRESS + O.H.S / FRONT SQUAT ATG</div>
+      <div style="font-size:21px;font-weight:900;text-transform:uppercase">HANG LOW MUSCLE SNATCH + O.H.S / FRONT SQUAT ATG</div>
     </div>
     <span class="tag-badge">TÉCNICA + FUERZA</span>
   </div>
-  <div class="block"><div class="block-title">Movilidad / Estabilidad</div><div class="mob-list">
-    <div class="mob-item">3×12/12 — Jalón tibial con liga</div>
-    <div class="mob-item">3×10/10 — Jalón flexores de cadera / liga</div>
+  <div class="block c1"><div class="block-title">Movilidad / Estabilidad</div><div class="mob-list">
+    <div class="mob-item">2×12/12 — Jalón tibial con liga</div>
+    <div class="mob-item">2×10/10 — Jalón flexores de cadera / liga</div>
     <div class="mob-item">3×10/10 — Rotaciones externas + interna de cadera / liga / sentado</div>
+    <div class="mob-item">2×30/30sg — Plancha lateral / apoyar parte interna</div>
     <div class="mob-item">3×10 — Elevaciones en "Y"</div>
-    <div class="mob-item">3×10 — Back press con liga (agarre de snatch)</div>
-    <div class="mob-item">3×10 — O.H.S. sobre pared / tubo</div>
+    <div class="mob-item">3×10 — Back press con liga / tubo (agarre de snatch)</div>
+    <div class="mob-item">3×10 — O.H.S. sobre pared / barra chica</div>
   </div></div>
-  <div class="block"><div class="block-title">Fuerza / Técnica — Back Push Press + O.H.S (agarre de snatch)</div>
+  <div class="block c2"><div class="block-title">Fuerza / Técnica — Hang Low Muscle Snatch + O.H.S (agarre de snatch)</div><div class="mob-list">
+    <div class="mob-item">Subir peso progresivamente. Encontrar el máximo del día</div>
+  </div></div>
+  <div class="block c3"><div class="block-title">Front Squat (tempo 2-2-2) (ATG)</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
-      <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">3+3</div><div class="set-pct">55%</div></div>
-      <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">3+3</div><div class="set-pct">60%</div></div>
-      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">3+3</div><div class="set-pct">65%</div></div>
-      <div class="set-row"><div class="set-series">Series 4–6</div><div class="set-reps">3+3</div><div class="set-pct">70%</div></div>
+      <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">4</div><div class="set-pct">60%</div></div>
+      <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">4</div><div class="set-pct">65%</div></div>
+      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">4</div><div class="set-pct">70%</div></div>
+      <div class="set-row"><div class="set-series">Series 4–6</div><div class="set-reps">4</div><div class="set-pct">75%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Front Squat (tempo 3-1-2) (ATG)</div>
-    <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
-      <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">6</div><div class="set-pct">60% (rir3)</div></div>
-      <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">6</div><div class="set-pct">65% (rir3)</div></div>
-      <div class="set-row"><div class="set-series">Series 3–6</div><div class="set-reps">5 a 7</div><div class="set-pct">70% (rir2)</div></div>
-    </div>
-  </div>
-  <div class="block"><div class="block-title">D.L Snatch Grip / Pull</div>
+  <div class="block c4"><div class="block-title">Hang Low Snatch Pull</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
       <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">4</div><div class="set-pct">85%</div></div>
       <div class="set-row"><div class="set-series">Series 2–4</div><div class="set-reps">4</div><div class="set-pct">90%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Core / Accesorios</div><div class="mob-list">
+  <div class="block c5"><div class="block-title">Core / Accesorios</div><div class="mob-list">
     <div class="mob-item">4×10/10 — Lateral squat / goblet</div>
     <div class="mob-item">3×8 — Z press con barra (sobre suelo)</div>
   </div></div>
-  <div class="block"><div class="block-title">Complemento</div><div class="mob-list">
+  <div class="block c6"><div class="block-title">Complemento</div><div class="mob-list">
     <div class="mob-item">3×20/20sg — Plancha lateral sobre banco (apoyar parte interna)</div>
-    <div class="mob-item">3×máx reps — V ups</div>
+    <div class="mob-item">3×máx reps — Strict T2B</div>
   </div></div>
-  <div class="block"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
+  <div class="block c7"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
     <div><div class="enc-label">¿Qué bloque te costó más trabajo?</div><input class="enc-input" type="text" placeholder="Ej. Movilidad, Técnica, Fuerza, Core..."></div>
     <div><div class="enc-label">¿Cómo te sentiste en general hoy?</div><textarea class="enc-textarea" placeholder="Escribe aquí tus comentarios..."></textarea></div>
     <div class="enc-note">📸 Recuerda enviar una captura de esta encuesta al entrenador</div>
@@ -272,11 +270,11 @@
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
     <div>
       <div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700">DÍA 4 · JUEVES</div>
-      <div style="font-size:21px;font-weight:900;text-transform:uppercase">JERK BALANCE + TALL JERK / TEMPO CLEAN + POWER JERK</div>
+      <div style="font-size:21px;font-weight:900;text-transform:uppercase">TALL CLEAN + TALL JERK / HANG LOW CLEAN + POWER JERK</div>
     </div>
     <span class="tag-badge">FUERZA + TÉCNICA</span>
   </div>
-  <div class="block"><div class="block-title">Movilidad</div><div class="mob-list">
+  <div class="block c1"><div class="block-title">Movilidad</div><div class="mob-list">
     <div class="mob-item">4×10/10 — Rotación externa de hombro con liga</div>
     <div class="mob-item">3×10/10 — Rotaciones laterales con peso (DB 5lb)</div>
     <div class="mob-item">3×8 a 10 — Press torácico en rodillo</div>
@@ -284,13 +282,13 @@
     <div class="mob-item">4×10 — Front squat controlado (liga chica en rodillas / barra grande)</div>
     <div class="mob-item">4×10 — Push up escapular</div>
   </div></div>
-  <div class="block"><div class="block-title">Fuerza / Técnica — Jerk Balance + Tall Jerk</div>
-    <div style="font-size:12px;color:#888;font-family:'Barlow',sans-serif;padding:4px 12px 8px">Solo barra. Ambos pies.</div>
-    <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">CARGA</span></div>
-      <div class="set-row"><div class="set-series">Series 1–4</div><div class="set-reps">5/5</div><div class="set-pct">Solo barra</div></div>
+  <div class="block c2"><div class="block-title">Fuerza / Técnica — Tall Clean + Tall Jerk</div>
+    <div style="font-size:12px;color:#888;font-family:'Barlow',sans-serif;padding:4px 12px 8px">Ambos pies.</div>
+    <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
+      <div class="set-row"><div class="set-series">Series 1–4</div><div class="set-reps">5/5</div><div class="set-pct">40%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Fuerza / Técnica — Tempo Clean + Power Jerk + Pause Split Jerk</div>
+  <div class="block c3"><div class="block-title">Fuerza / Técnica — Hang Low Clean + Power Jerk + Pause Split Jerk</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
       <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">2+1+1</div><div class="set-pct">55%</div></div>
       <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">2+1+1</div><div class="set-pct">60%</div></div>
@@ -298,22 +296,22 @@
       <div class="set-row"><div class="set-series">Series 4–7</div><div class="set-reps">2+1+1</div><div class="set-pct">70%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Hang Low Clean Pull</div>
+  <div class="block c4"><div class="block-title">Block Clean Pull (abajo de rodillas)</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
       <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">5</div><div class="set-pct">92%</div></div>
       <div class="set-row"><div class="set-series">Series 2–4</div><div class="set-reps">5</div><div class="set-pct">97%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Core / Accesorios</div><div class="mob-list">
+  <div class="block c5"><div class="block-title">Core / Accesorios</div><div class="mob-list">
     <div class="mob-item">4×5/5 — Step up altura de medio muslo</div>
     <div class="mob-item">3×10/10 — Curl femoral con liga (sentado)</div>
     <div class="mob-item">3×10 — Nados boca abajo con peso (2.5lb)</div>
   </div></div>
-  <div class="block"><div class="block-title">Complemento</div><div class="mob-list">
+  <div class="block c6"><div class="block-title">Complemento</div><div class="mob-list">
     <div class="mob-item">3×10 — Extensiones lumbares GHD / con peso</div>
     <div class="mob-item">3×8/8 — Press pallof</div>
   </div></div>
-  <div class="block"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
+  <div class="block c7"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
     <div><div class="enc-label">¿Qué bloque te costó más trabajo?</div><input class="enc-input" type="text" placeholder="Ej. Movilidad, Técnica, Fuerza, Core..."></div>
     <div><div class="enc-label">¿Cómo te sentiste en general hoy?</div><textarea class="enc-textarea" placeholder="Escribe aquí tus comentarios..."></textarea></div>
     <div class="enc-note">📸 Recuerda enviar una captura de esta encuesta al entrenador</div>
@@ -325,11 +323,11 @@
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
     <div>
       <div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700">DÍA 5 · VIERNES</div>
-      <div style="font-size:21px;font-weight:900;text-transform:uppercase">PAUSE SNATCH + O.H.S / BACK SQUAT</div>
+      <div style="font-size:21px;font-weight:900;text-transform:uppercase">TEMPO SNATCH + O.H.S / BACK SQUAT</div>
     </div>
     <span class="tag-badge">TÉCNICA + FUERZA</span>
   </div>
-  <div class="block"><div class="block-title">Movilidad / Estabilidad</div><div class="mob-list">
+  <div class="block c1"><div class="block-title">Movilidad / Estabilidad</div><div class="mob-list">
     <div class="mob-item">3×40/40sg — Dorsiflexión tobillos con liga</div>
     <div class="mob-item">3×10/10 — Jalón flexores de cadera / liga</div>
     <div class="mob-item">2×10/10 — Rotaciones externas + interna de cadera / liga / sentado</div>
@@ -337,37 +335,40 @@
     <div class="mob-item">3×8 — Back press con liga (agarre abierto)</div>
     <div class="mob-item">3×10 — O.H.S. sobre pared / barra chica / liga chica en rodilla</div>
   </div></div>
-  <div class="block"><div class="block-title">Técnica — Pause Snatch + O.H.S (pausa arriba de rodillas)</div>
+  <div class="block c2"><div class="block-title">Técnica — Tempo Snatch + O.H.S (pausa arriba de rodillas)</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
       <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">2+2</div><div class="set-pct">55%</div></div>
       <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">2+2</div><div class="set-pct">60%</div></div>
       <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">2+2</div><div class="set-pct">65%</div></div>
-      <div class="set-row"><div class="set-series">Series 4–6</div><div class="set-reps">2+2</div><div class="set-pct">70%</div></div>
+      <div class="set-row"><div class="set-series">Serie 4</div><div class="set-reps">2+2</div><div class="set-pct">70%</div></div>
+      <div class="set-row"><div class="set-series">Series 5–7</div><div class="set-reps">2+2</div><div class="set-pct">75%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Back Squat (tempo 3-1-1)</div>
+  <div class="block c3"><div class="block-title">Fuerza — Back Squat (tempo 3-1)</div>
     <div class="sets-table"><div class="sets-header"><span>SERIE</span><span style="text-align:center">REPS</span><span style="text-align:center">%RM</span></div>
       <div class="set-row"><div class="set-series">Serie 1</div><div class="set-reps">4</div><div class="set-pct">60%</div></div>
       <div class="set-row"><div class="set-series">Serie 2</div><div class="set-reps">4</div><div class="set-pct">65%</div></div>
-      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">4</div><div class="set-pct">70%</div></div>
-      <div class="set-row"><div class="set-series">Serie 4</div><div class="set-reps">4</div><div class="set-pct">75%</div></div>
-      <div class="set-row"><div class="set-series">Series 5–7</div><div class="set-reps">3</div><div class="set-pct">80%</div></div>
+      <div class="set-row"><div class="set-series">Serie 3</div><div class="set-reps">3</div><div class="set-pct">70%</div></div>
+      <div class="set-row"><div class="set-series">Serie 4</div><div class="set-reps">3</div><div class="set-pct">75%</div></div>
+      <div class="set-row"><div class="set-series">Serie 5</div><div class="set-reps">3</div><div class="set-pct">80%</div></div>
+      <div class="set-row"><div class="set-series">Series 6–8</div><div class="set-reps">3</div><div class="set-pct">83%</div></div>
     </div>
   </div>
-  <div class="block"><div class="block-title">Core / Accesorios</div><div class="mob-list">
+  <div class="block c5"><div class="block-title">Core / Accesorios</div><div class="mob-list">
     <div class="mob-item">4×10/10 — Lateral squat / goblet</div>
     <div class="mob-item">3×8 — Sott press</div>
   </div></div>
-  <div class="block"><div class="block-title">Complemento</div><div class="mob-list">
+  <div class="block c6"><div class="block-title">Complemento</div><div class="mob-list">
     <div class="mob-item">3×20/20sg — Plancha lateral sobre banco (apoyar parte interna)</div>
     <div class="mob-item">3×1 min — Plancha baja con peso</div>
   </div></div>
-  <div class="block"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
+  <div class="block c7"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
     <div><div class="enc-label">¿Qué bloque te costó más trabajo?</div><input class="enc-input" type="text" placeholder="Ej. Movilidad, Técnica, Fuerza, Core..."></div>
     <div><div class="enc-label">¿Cómo te sentiste en general hoy?</div><textarea class="enc-textarea" placeholder="Escribe aquí tus comentarios..."></textarea></div>
     <div class="enc-note">📸 Recuerda enviar una captura de esta encuesta al entrenador</div>
   </div></div>
 </div>
+
 
 <!-- DÍA 6 -->
 <div id="day-5" class="day-panel">
@@ -378,13 +379,13 @@
     </div>
     <span class="tag-badge">MOVILIDAD LIBRE</span>
   </div>
-  <div class="block"><div class="block-title">Movilidad general</div><div class="mob-list">
+  <div class="block c1"><div class="block-title">Movilidad general</div><div class="mob-list">
     <div class="mob-item">10–15 min — Movilidad libre de tobillos, caderas y hombros</div>
     <div class="mob-item">Caminata o cardio ligero (opcional)</div>
     <div class="mob-item">Estiramientos generales</div>
   </div></div>
   <div style="margin-top:8px;font-size:11px;color:#555">📋 Día libre de programación — enfocarse en recuperación</div>
-  <div class="block" style="margin-top:14px"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
+  <div class="block c7" style="margin-top:14px"><div class="block-title">📋 Encuesta del día</div><div class="mob-list" style="display:flex;flex-direction:column;gap:10px">
     <div><div class="enc-label">¿Qué bloque te costó más trabajo?</div><input class="enc-input" type="text" placeholder="Ej. Movilidad, Técnica, Fuerza..."></div>
     <div><div class="enc-label">¿Cómo te sentiste en general hoy?</div><textarea class="enc-textarea" placeholder="Escribe aquí tus comentarios..."></textarea></div>
     <div class="enc-note">📸 Recuerda enviar una captura de esta encuesta al entrenador</div>
@@ -393,14 +394,14 @@
 
 <!-- METAS -->
 <div id="day-6" class="day-panel">
-  <div style="margin-bottom:14px"><div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700;margin-bottom:4px">MARCAS PERSONALES · SEMANA 2/4</div><div style="font-size:21px;font-weight:900;text-transform:uppercase">RMs + OBJETIVOS</div></div>
-  <div class="block"><div class="block-title">Registro de RMs</div><div class="rm-grid">
+  <div style="margin-bottom:14px"><div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700;margin-bottom:4px">MARCAS PERSONALES · SEMANA 3/4</div><div style="font-size:21px;font-weight:900;text-transform:uppercase">RMs + OBJETIVOS</div></div>
+  <div class="block c3"><div class="block-title">Registro de RMs</div><div class="rm-grid">
     <div class="rm-card"><div class="rm-move">Snatch</div><input class="rm-input" type="text" placeholder="Actual (kg)"><input class="rm-input" style="margin-top:4px;border-color:#333;color:#888" type="text" placeholder="Meta (kg)"><div class="rm-label">actual → meta</div></div>
     <div class="rm-card"><div class="rm-move">Clean &amp; Jerk</div><input class="rm-input" type="text" placeholder="Actual (kg)"><input class="rm-input" style="margin-top:4px;border-color:#333;color:#888" type="text" placeholder="Meta (kg)"><div class="rm-label">actual → meta</div></div>
     <div class="rm-card"><div class="rm-move">Front Squat</div><input class="rm-input" type="text" placeholder="Actual (kg)"><input class="rm-input" style="margin-top:4px;border-color:#333;color:#888" type="text" placeholder="Meta (kg)"><div class="rm-label">actual → meta</div></div>
     <div class="rm-card"><div class="rm-move">Back Squat</div><input class="rm-input" type="text" placeholder="Actual (kg)"><input class="rm-input" style="margin-top:4px;border-color:#333;color:#888" type="text" placeholder="Meta (kg)"><div class="rm-label">actual → meta</div></div>
   </div></div>
-  <div class="block"><div class="block-title">✓ Objetivos del bloque</div><div class="mob-list">
+  <div class="block c5"><div class="block-title">✓ Objetivos del bloque</div><div class="mob-list">
     <div class="mob-item">Mejorar la estabilidad y movilidad</div>
     <div class="mob-item">Aprender a cargar tobillos, caderas, hombros y rodillas</div>
     <div class="mob-item">Énfasis técnico/progresivo en snatch y C&amp;J</div>
@@ -411,7 +412,7 @@
 
 <!-- REGISTRO -->
 <div id="day-7" class="day-panel">
-  <div style="margin-bottom:14px"><div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700;margin-bottom:4px">SEMANA 2/4 · P.F. 2/4</div><div style="font-size:21px;font-weight:900;text-transform:uppercase">REGISTRO SEMANAL</div></div>
+  <div style="margin-bottom:14px"><div style="font-size:10px;color:#e63030;letter-spacing:3px;font-weight:700;margin-bottom:4px">SEMANA 3/4 · P.F. 3/4</div><div style="font-size:21px;font-weight:900;text-transform:uppercase">REGISTRO SEMANAL</div></div>
   <div class="reg-table">
     <div class="reg-header"><span>DÍA</span><span style="text-align:center">FATIGA<br>1–10</span><span style="text-align:center;padding-left:6px">BLOQUE MAYOR FATIGA</span><span style="text-align:center">MOTIV.<br>1–10</span></div>
     <div class="reg-row"><div class="reg-day">Lunes</div><div style="text-align:center"><input class="reg-input" type="number" min="1" max="10" placeholder="–"></div><div style="padding:0 6px"><input class="reg-bloque" type="text" placeholder="ej. A, B, C…"></div><div style="text-align:center"><input class="reg-input" type="number" min="1" max="10" placeholder="–"></div></div>
