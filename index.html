@@ -307,18 +307,11 @@ function enviarEncuesta(btn){
   const dolor=sv.querySelector('.enc-input').value.trim()||'—';
   const com=sv.querySelector('.enc-textarea').value.trim()||'—';
   const dia=btn.closest('.day-panel').querySelector('div div').textContent.trim();
-  const msg='*LIFT-FLOW · Semana 2/4 (GEN 2/4)*
-*Encuesta · '+dia+'*
-
-'+
-    'Sensación general: '+(emo[gen]||gen)+'
-'+
-    'Fatiga: '+g('fatiga')+'/10
-'+
-    'Bloque más difícil: '+g('bloque')+'
-'+
-    'Molestias: '+dolor+'
-'+
+  const msg='*LIFT-FLOW · Semana 2/4 (GEN 2/4)*\n*Encuesta · '+dia+'*\n\n'+
+    'Sensación general: '+(emo[gen]||gen)+'\n'+
+    'Fatiga: '+g('fatiga')+'/10\n'+
+    'Bloque más difícil: '+g('bloque')+'\n'+
+    'Molestias: '+dolor+'\n'+
     'Comentarios: '+com;
   window.open('https://wa.me/527152170976?text='+encodeURIComponent(msg),'_blank');
 }
